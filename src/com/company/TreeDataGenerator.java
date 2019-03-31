@@ -8,10 +8,10 @@ import static com.company.RandomUtils.generateRandomInteger;
 class TreeDataGenerator implements DataGenerator<TreeNode> {
 
     private static final double TRUE_PROBABILITY = 0.7;
-    private static final int INTEGER_RANGE_START = 2;
-    private static final int INTEGER_RANGE_END = 1000;
-    private static final int TREENODES_RANGE_START = 10;
-    private static final int TREENODES_RANGE_END = 40;
+    private static final int INTEGER_RANGE_START = 1;
+    private static final int INTEGER_RANGE_END = 3;
+    private static final int TREENODES_RANGE_START = 5;
+    private static final int TREENODES_RANGE_END = 50;
 
     @Override
     public TreeNode generateData() {
