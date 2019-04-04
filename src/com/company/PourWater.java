@@ -7,6 +7,8 @@ public class PourWater {
         int pourLocation;
         while (water > 0) {
             int left = location - 1;
+
+            // Left
             while (left >= 0) {
                 if (heights[left] + waters[left] > heights[left + 1] + waters[left+ 1]) {
                     break;
@@ -14,9 +16,13 @@ public class PourWater {
                 left --;
             }
             if (heights[left + 1] + waters[left + 1] < heights[location] + waters[location]) {
-                pourLocation = left + 1; waters[pourLocation]++; water--;
+                pourLocation = left + 1;
+                waters[pourLocation]++;
+                water--;
                 continue;
             }
+
+            // Right
             int right = location + 1;
             while (right < heights.length) {
                 if (heights[right] + waters[right] > heights[right - 1] + waters[right - 1]) {
@@ -30,6 +36,8 @@ public class PourWater {
                 water--;
                 continue;
             }
+
+            // Center
             pourLocation = location;
             waters[pourLocation]++;
             water--;
